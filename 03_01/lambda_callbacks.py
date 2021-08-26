@@ -16,28 +16,27 @@ offsets = {
 }
 
 
-def go_up():
+def bind_direction_keys():
+    screen.onkey(lambda: set_snake_direction("up"), "Up")
+    screen.onkey(lambda: set_snake_direction("down"), "Down")
+    screen.onkey(lambda: set_snake_direction("left"), "Left")
+    screen.onkey(lambda: set_snake_direction("right"), "Right")
+
+
+def set_snake_direction(direction):
     global snake_direction
-    if snake_direction != "down":
-        snake_direction = "up"
-
-
-def go_right():
-    global snake_direction
-    if snake_direction != "left":
-        snake_direction = "right"
-
-
-def go_down():
-    global snake_direction
-    if snake_direction != "up":
-        snake_direction = "down"
-
-
-def go_left():
-    global snake_direction
-    if snake_direction != "right":
-        snake_direction = "left"
+    if direction == "up":
+        if snake_direction != "down":  # No self-collision simply by pressing wrong key.
+            snake_direction = "up"
+    elif direction == "down":
+        if snake_direction != "up":
+            snake_direction = "down"
+    elif direction == "left":
+        if snake_direction != "right":
+            snake_direction = "left"
+    elif direction == "right":
+        if snake_direction != "left":
+            snake_direction = "right"
 
 
 def game_loop():
@@ -114,10 +113,7 @@ screen.tracer(0)  # Turn off automatic animation.
 
 # Event handlers
 screen.listen()
-screen.onkey(go_up, "Up")
-screen.onkey(go_right, "Right")
-screen.onkey(go_down, "Down")
-screen.onkey(go_left, "Left")
+bind_direction_keys()
 
 # Create a turtle to do your bidding
 stamper = turtle.Turtle()
