@@ -65,7 +65,6 @@ def game_loop():
             stamper.stamp()
 
         # Refresh screen
-        screen.title(f"Snake Game. Score: {score}")
         screen.update()
 
         # Rinse and repeat
@@ -73,9 +72,8 @@ def game_loop():
 
 
 def food_collision():
-    global food_pos, score
+    global food_pos
     if get_distance(snake[-1], food_pos) < 20:
-        score += 1  # score = score + 1
         food_pos = get_random_food_pos()
         food.goto(food_pos)
         return True
@@ -117,7 +115,6 @@ stamper.penup()
 # Create snake as a list of coordinate pairs.
 snake = [[0, 0], [20, 0], [40, 0], [60, 0]]
 snake_direction = "up"
-score = 0
 
 # Draw snake for the first time.
 for segment in snake:
