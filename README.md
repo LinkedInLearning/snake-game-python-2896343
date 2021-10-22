@@ -1,7 +1,10 @@
 # Building the Classic Snake Game with Python
-This is the repository for the LinkedIn Learning course `Building the Classic Snake Game with Python`. The full course is available from [LinkedIn Learning][lil-course-url].
+This is the repository for the LinkedIn Learning course Building the Classic Snake Game with Python. The full course is available from [LinkedIn Learning][lil-course-url].
 
-_See the readme file in the main branch for updated instructions and information._
+![Building the Classic Snake Game with Python][lil-thumbnail-url] 
+
+Are you looking for a fun, meaningful way to level up your Python programming skills? In this course, instructor Robin Andrews shows you how to put together what you need to know to build the Python version of a classic Snake game. Robin introduces you to turtle graphics and how you can use and control animation using Python turtle graphics. He explains global variables and shows you how to draw with turtle graphics by using stamps. With these pieces in place, it’s time to work on the game itself! Robin walks you through how to represent the snake, move it around the screen, and control the snake’s direction. He discusses the game loop that is used to control the game and also goes over how to add snake food to the game, implement a scoring system, and reset the game. Robin finishes up with advice on how to use Lambda expressions to avoid repetition in your game and some fun ways to personalize your game.
+
 ## Instructions
 This repository has branches for each of the videos in the course. You can use the branch pop up menu in github to switch to a specific branch and take a look at the course at that stage, or you can add `/tree/BRANCH_NAME` to the URL to go to the branch you want to access.
 
@@ -26,8 +29,15 @@ To resolve this issue:
 2. Clone this repository into your local machine using the terminal (Mac), CMD (Windows), or a GUI tool like SourceTree.
 
 
-[0]: # (Replace these placeholder URLs with actual course URLs)
+### Instructor
 
-[lil-course-url]: https://www.linkedin.com/learning/
-[lil-thumbnail-url]: http://
+Robin Andrews 
+                            
 
+
+                            
+
+Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learning/instructors/robin-andrews).
+
+[lil-course-url]: https://www.linkedin.com/learning/building-the-classic-snake-game-with-python
+[lil-thumbnail-url]: https://cdn.lynda.com/course/2896343/2896343-1634664622455-16x9.jpg
